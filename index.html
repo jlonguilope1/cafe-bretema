@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="es" data-lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Café Brétema · Orzán, A Coruña</title>
+<meta name="description" content="Cafetería en el Orzán, A Coruña. Desayunos, meriendas, café y dulces caseros a un paso de la playa.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--sea:#173f4f;--sea-soft:#2c5b6b;--paper:#f6f1e8;--white:#fffdf8;--ink:#22282a;--muted:#62696a;--clay:#b8582f;--line:#ddd3c3;
+  --serif:"Libre Caslon Text",Georgia,serif;--sans:"Work Sans",system-ui,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:17px/1.65 var(--sans);overflow-x:hidden}
+a{color:inherit}
+html[data-lang="es"] .en, html[data-lang="en"] .es{display:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.ph{background:#c9c0b2 center/cover no-repeat}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
+.bar{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:72px}
+.bar nav{display:flex;gap:24px;font-size:15px}
+.bar nav a{text-decoration:none}
+.bar nav a:hover{color:var(--clay)}
+.logo{font-family:var(--serif);font-size:26px;text-decoration:none;color:var(--sea);text-align:center;line-height:1}
+.logo small{display:block;font:500 10px var(--sans);letter-spacing:.3em;text-transform:uppercase;color:var(--muted);margin-top:5px}
+.right{display:flex;justify-content:flex-end;gap:14px;align-items:center;font-size:15px}
+.lang{background:none;border:1px solid var(--line);font:500 13px var(--sans);padding:5px 10px;border-radius:4px;cursor:pointer;color:var(--ink)}
+.ig{text-decoration:none}
+@media(max-width:760px){.bar{grid-template-columns:auto 1fr auto;height:62px}.bar nav{display:none}.logo{text-align:left;font-size:23px}.ig{display:none}}
+
+/* hero */
+.hero{position:relative;height:min(78vh,720px);min-height:420px}
+.hero .ph{position:absolute;inset:0}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(15,35,44,0) 45%,rgba(15,35,44,.55) 100%)}
+.hero .cap{position:absolute;left:0;right:0;bottom:0;z-index:2;color:#fff;padding-bottom:34px}
+.hero .cap p{margin:0;font-size:15px;opacity:.9}
+
+/* welcome */
+.welcome{text-align:center;padding:80px 0 70px;max-width:760px;margin:0 auto}
+.welcome .hi{font-family:var(--serif);font-style:italic;color:var(--clay);font-size:20px;margin:0 0 8px}
+.welcome h1{font-family:var(--serif);font-weight:400;font-size:clamp(34px,5vw,54px);line-height:1.1;margin:0 0 22px;color:var(--sea)}
+.welcome p{margin:0 auto 14px;color:#3c4446;max-width:36em}
+.ctas{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:30px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 22px;font:500 15px var(--sans);text-decoration:none;border-radius:999px;border:1.5px solid var(--sea);color:var(--sea);background:none;cursor:pointer}
+.btn.solid{background:var(--sea);color:#fff}
+.btn:hover{background:var(--sea-soft);border-color:var(--sea-soft);color:#fff}
+.now{display:inline-flex;align-items:center;gap:9px;font-size:15px;color:var(--muted);margin-top:26px}
+.dot{width:8px;height:8px;border-radius:50%;background:#3fa868}
+.dot.closed{background:#d0643f}
+
+/* moments tiles */
+.moments{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;padding-bottom:90px}
+.tile{text-decoration:none;display:block}
+.tile .ph{aspect-ratio:4/3;border-radius:6px;transition:transform .5s ease}
+.tile:hover .ph{transform:scale(1.02)}
+.tile h3{font-family:var(--serif);font-weight:400;font-size:22px;margin:14px 0 2px;color:var(--sea)}
+.tile p{margin:0;font-size:15px;color:var(--muted)}
+@media(max-width:860px){.moments{grid-template-columns:1fr 1fr;gap:14px}.tile h3{font-size:19px}}
+@media(max-width:480px){.moments{grid-template-columns:1fr}}
+
+/* carta */
+.carta{background:var(--white);padding:88px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.carta .head{text-align:center;margin-bottom:46px}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4vw,42px);line-height:1.12;margin:0 0 10px;color:var(--sea)}
+.carta .head p{margin:0;color:var(--muted)}
+.cols{display:grid;grid-template-columns:repeat(3,1fr);gap:48px}
+.cols h3{font-family:var(--serif);font-weight:400;font-style:italic;font-size:24px;color:var(--clay);margin:0 0 8px;padding-bottom:10px;border-bottom:1px solid var(--line);scroll-margin-top:90px}
+.dish{display:flex;justify-content:space-between;gap:14px;padding:10px 0}
+.dish span:first-child{font-weight:500}
+.dish small{display:block;font-weight:400;color:var(--muted);font-size:14px;line-height:1.4}
+.dish .p{font-family:var(--serif);white-space:nowrap}
+.carta .foot{margin-top:40px;font-size:14px;color:var(--muted);text-align:center}
+@media(max-width:860px){.cols{grid-template-columns:1fr;gap:34px}}
+
+/* us */
+.us{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;padding:96px 0}
+.us .ph{aspect-ratio:4/5;border-radius:6px}
+.us p{color:#3c4446;margin:0 0 15px}
+.sign{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--sea);margin-top:22px}
+@media(max-width:860px){.us{grid-template-columns:1fr;gap:34px;padding:70px 0}.us .ph{aspect-ratio:4/3}}
+
+/* visit */
+.visit-wrap{background:var(--sea);color:#e9efed}
+.visit{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;padding:88px 20px}
+.visit h2{color:#fff}
+.addr{font-size:19px;margin:6px 0 4px;color:#fff}
+.how{color:#b9cac8;margin:0 0 24px;font-size:15px}
+.hours{width:100%;border-collapse:collapse;margin:0 0 28px;font-size:16px}
+.hours td{padding:8px 0;border-bottom:1px solid rgba(255,255,255,.14)}
+.hours td:last-child{text-align:right}
+.hours tr.today td{font-weight:600;color:#fff}
+.visit .btn{border-color:#fff;color:#fff}
+.visit .btn.solid{background:#fff;color:var(--sea)}
+.visit .btn:hover{background:var(--clay);border-color:var(--clay);color:#fff}
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.mapbox{min-height:440px;border-radius:6px;overflow:hidden;background:#2c5b6b;position:relative}
+.mapbox iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+@media(max-width:860px){.visit{grid-template-columns:1fr;gap:34px;padding:66px 20px}.mapbox{min-height:320px}}
+
+footer{padding:34px 0 40px;font-size:14px;color:var(--muted)}
+footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+footer .demo{margin-top:18px;font-size:13px}
+footer .demo a{color:var(--clay)}
+
+/* mobile bottom bar */
+.mbar{display:none}
+@media(max-width:760px){
+  .mbar{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--white);border-top:1px solid var(--line)}
+  .mbar a{text-align:center;padding:13px 4px 15px;font:500 14px var(--sans);text-decoration:none;color:var(--sea)}
+  .mbar a+a{border-left:1px solid var(--line)}
+  body{padding-bottom:56px}
+}
+
+.fade{opacity:0;transform:translateY(14px);transition:opacity .8s ease,transform .8s ease}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header><div class="wrap bar">
+  <nav>
+    <a href="#carta"><span class="es">Carta</span><span class="en">Menu</span></a>
+    <a href="#nosotros"><span class="es">Nosotros</span><span class="en">About</span></a>
+    <a href="#visitanos"><span class="es">Cómo llegar</span><span class="en">Find us</span></a>
+  </nav>
+  <a class="logo" href="#">Brétema<small>Café · Orzán</small></a>
+  <div class="right">
+    <a class="ig" href="#" data-demo-ig>Instagram</a>
+    <button class="lang" id="lang">EN</button>
+  </div>
+</div></header>
+
+<section class="hero">
+  <div class="ph" data-img="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=2000&q=80"></div>
+  <div class="cap"><div class="wrap"><p><span class="es">Rúa do Exemplo, 12 · A Coruña</span><span class="en">Rúa do Exemplo, 12 · A Coruña</span></p></div></div>
+</section>
+
+<div class="wrap">
+  <section class="welcome fade">
+    <p class="hi"><span class="es">Bienvenidos a</span><span class="en">Welcome to</span></p>
+    <h1>Café Brétema</h1>
+    <p><span class="es">Una cafetería pequeña bajando hacia la playa del Orzán. Ven a desayunar sin prisa, a merendar con los amigos o a por un café para llevar antes de pasear por el paseo marítimo.</span><span class="en">A small café on the way down to Orzán beach. Come for a slow breakfast, an afternoon snack with friends, or a coffee to take along the seafront.</span></p>
+    <p><span class="es">Tú eliges el momento. Nosotros ponemos el café.</span><span class="en">You pick the moment. We'll make the coffee.</span></p>
+    <div class="ctas">
+      <a class="btn solid" href="#carta"><span class="es">Ver la carta</span><span class="en">See the menu</span></a>
+      <a class="btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Praia+do+Orz%C3%A1n%2C+A+Coru%C3%B1a"><span class="es">Cómo llegar</span><span class="en">Directions</span></a>
+    </div>
+    <div class="now"><span class="dot" id="dot"></span><span id="nowText"></span></div>
+  </section>
+
+  <section class="moments">
+    <a class="tile fade" href="#c-desayunos"><div class="ph" data-img="https://images.unsplash.com/photo-1484723091739-30a097e8f929?auto=format&fit=crop&w=900&q=80"></div>
+      <h3><span class="es">Desayunos</span><span class="en">Breakfast</span></h3><p><span class="es">Tostadas de pan de Carral y zumo recién exprimido</span><span class="en">Carral bread toast and fresh orange juice</span></p></a>
+    <a class="tile fade" href="#c-cafe"><div class="ph" data-img="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=80"></div>
+      <h3><span class="es">Café y té</span><span class="en">Coffee and tea</span></h3><p><span class="es">Tostado en Galicia, también para llevar</span><span class="en">Roasted in Galicia, also to go</span></p></a>
+    <a class="tile fade" href="#c-dulces"><div class="ph" data-img="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=80"></div>
+      <h3><span class="es">Para merendar</span><span class="en">Afternoon treats</span></h3><p><span class="es">Bica, tarta de Santiago y lo que salga del horno</span><span class="en">Bica, Santiago cake and whatever's fresh</span></p></a>
+  </section>
+</div>
+
+<section class="carta" id="carta"><div class="wrap">
+  <div class="head fade">
+    <h2><span class="es">La carta</span><span class="en">The menu</span></h2>
+    <p><span class="es">Los dulces cambian según la semana. Pregunta en la barra qué hay hoy.</span><span class="en">Cakes change every week. Ask at the counter what we have today.</span></p>
+  </div>
+  <div class="cols fade">
+    <div><h3 id="c-cafe"><span class="es">Café</span><span class="en">Coffee</span></h3>
+      <div class="dish"><span>Solo</span><span class="p">1,40</span></div>
+      <div class="dish"><span>Cortado</span><span class="p">1,50</span></div>
+      <div class="dish"><span>Café con leche<small><span class="es">También con avena</span><span class="en">Oat milk available</span></small></span><span class="p">1,70</span></div>
+      <div class="dish"><span>Flat white</span><span class="p">2,40</span></div>
+      <div class="dish"><span><span class="es">Colacao</span><span class="en">Hot chocolate</span></span><span class="p">1,80</span></div>
+      <div class="dish"><span><span class="es">Té o infusión</span><span class="en">Tea</span></span><span class="p">1,60</span></div>
+    </div>
+    <div><h3 id="c-desayunos"><span class="es">Desayunos</span><span class="en">Breakfast</span></h3>
+      <div class="dish"><span><span class="es">Tostada de pan de Carral</span><span class="en">Carral bread toast</span><small><span class="es">Con tomate y aceite, o mantequilla y mermelada</span><span class="en">Tomato and olive oil, or butter and jam</span></small></span><span class="p">2,20</span></div>
+      <div class="dish"><span><span class="es">Tostada de aguacate</span><span class="en">Avocado toast</span><small><span class="es">Con huevo</span><span class="en">With egg</span></small></span><span class="p">4,50</span></div>
+      <div class="dish"><span>Croissant<small><span class="es">A la plancha si quieres</span><span class="en">Grilled if you like</span></small></span><span class="p">1,60</span></div>
+      <div class="dish"><span><span class="es">Zumo de naranja</span><span class="en">Orange juice</span></span><span class="p">2,40</span></div>
+      <div class="dish"><span><span class="es">Desayuno completo</span><span class="en">Full breakfast</span><small><span class="es">Café, zumo y tostada</span><span class="en">Coffee, juice and toast</span></small></span><span class="p">4,80</span></div>
+    </div>
+    <div><h3 id="c-dulces"><span class="es">Dulces de la casa</span><span class="en">Homemade sweets</span></h3>
+      <div class="dish"><span><span class="es">Bica</span><span class="en">Bica (Galician sponge cake)</span></span><span class="p">2,50</span></div>
+      <div class="dish"><span><span class="es">Tarta de Santiago</span><span class="en">Santiago almond cake</span></span><span class="p">3,20</span></div>
+      <div class="dish"><span><span class="es">Bizcocho de yogur</span><span class="en">Yogurt cake</span></span><span class="p">2,20</span></div>
+      <div class="dish"><span><span class="es">Tarta de queso</span><span class="en">Cheesecake</span></span><span class="p">3,80</span></div>
+      <div class="dish"><span>Filloas<small><span class="es">Los domingos de invierno</span><span class="en">Winter Sundays</span></small></span><span class="p">3,50</span></div>
+    </div>
+  </div>
+  <p class="foot"><span class="es">Precios en euros, IVA incluido. Si tienes alguna alergia, dínoslo.</span><span class="en">Prices in euros, VAT included. Tell us about any allergies.</span></p>
+</div></section>
+
+<div class="wrap">
+  <section class="us" id="nosotros">
+    <div class="ph fade" data-img="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1100&q=80"></div>
+    <div class="fade">
+      <h2><span class="es">Un poco de nosotros</span><span class="en">A bit about us</span></h2>
+      <p><span class="es">Abrimos en 2019 con cuatro mesas y una cafetera de segunda mano. El nombre lo puso la niebla: en Galicia la llamamos brétema, y aquí en el Orzán entra casi todas las mañanas.</span><span class="en">We opened in 2019 with four tables and a second-hand espresso machine. The name came from the fog: in Galicia we call it brétema, and here in Orzán it rolls in most mornings.</span></p>
+      <p><span class="es">El pan lo traemos de Carral, el café es de un tostador gallego y los dulces los hacemos nosotros cada mañana. Nada más complicado que eso.</span><span class="en">Our bread comes from Carral, the coffee from a Galician roaster, and we bake the sweets ourselves every morning. Nothing fancier than that.</span></p>
+      <p class="sign">Uxía e Brais</p>
+    </div>
+  </section>
+</div>
+
+<section class="visit-wrap" id="visitanos"><div class="wrap visit" style="padding-left:20px;padding-right:20px">
+  <div class="fade">
+    <h2><span class="es">Ven a vernos</span><span class="en">Come and see us</span></h2>
+    <p class="addr">Rúa do Exemplo, 12 · 15003 A Coruña</p>
+    <p class="addr" style="margin-bottom:10px">Tel. 981 000 000</p>
+    <p class="how"><span class="es">A cinco minutos andando de la Plaza de Lugo. Tenemos terraza cuando el tiempo deja.</span><span class="en">Five minutes on foot from Plaza de Lugo. Terrace seating when the weather allows.</span></p>
+    <table class="hours" id="hours"></table>
+    <div class="actions">
+      <a class="btn solid" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Praia+do+Orz%C3%A1n%2C+A+Coru%C3%B1a"><span class="es">Abrir en Google Maps</span><span class="en">Open in Google Maps</span></a>
+      <a class="btn" href="#" data-demo><span class="es">Llamar</span><span class="en">Call</span></a>
+      <a class="btn" href="#" data-demo>WhatsApp</a>
+    </div>
+  </div>
+  <div class="mapbox fade">
+    <iframe title="Mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Praia%20do%20Orz%C3%A1n%2C%20A%20Coru%C3%B1a&z=16&output=embed"></iframe>
+  </div>
+</div></section>
+
+<footer><div class="wrap">
+  <div class="row"><span>© Café Brétema · Rúa do Exemplo, 12 · A Coruña · 981 000 000</span><span>Instagram @bretema.cafe</span></div>
+  <div class="demo"><span class="es">Web de ejemplo: Café Brétema es un negocio inventado y las fotos son de Unsplash. Diseño y programación: <a href="https://jlonguilope1.github.io">Julián Longarela</a>.</span><span class="en">Demo website: Café Brétema is a fictional business and photos are from Unsplash. Design and code: <a href="https://jlonguilope1.github.io">Julián Longarela</a>.</span></div>
+</div></footer>
+
+<nav class="mbar">
+  <a href="#" data-demo><span class="es">Llamar</span><span class="en">Call</span></a>
+  <a href="#carta"><span class="es">Carta</span><span class="en">Menu</span></a>
+  <a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Praia+do+Orz%C3%A1n%2C+A+Coru%C3%B1a"><span class="es">Cómo llegar</span><span class="en">Directions</span></a>
+</nav>
+
+<script>
+// photos: load as backgrounds; if one fails the warm placeholder colour stays
+document.querySelectorAll("[data-img]").forEach(el => {
+  const i = new Image(); i.onload = () => el.style.backgroundImage = `url("${el.dataset.img}")`; i.src = el.dataset.img;
+});
+const HOURS = [[1,"08:00","20:00"],[2,"08:00","20:00"],[3,"08:00","20:00"],[4,"08:00","20:00"],[5,"08:00","21:00"],[6,"09:00","21:00"],[0,"09:30","14:00"]];
+const DAYS = {es:["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"],en:["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]};
+let lang = "es";
+try { lang = localStorage.getItem("bretema-lang") || "es"; } catch(e) {}
+const toM = s => +s.slice(0,2)*60 + +s.slice(3);
+function render(){
+  const now = new Date(), d = now.getDay(), t = document.getElementById("hours"); t.innerHTML = "";
+  for (const [day,o,c] of HOURS){ const tr = document.createElement("tr"); if(day===d) tr.className="today"; tr.innerHTML = `<td>${DAYS[lang][day]}</td><td>${o} – ${c}</td>`; t.appendChild(tr); }
+  const h = HOURS.find(x=>x[0]===d), m = now.getHours()*60+now.getMinutes(), open = m>=toM(h[1]) && m<toM(h[2]);
+  const next = m<toM(h[1]) ? h[1] : HOURS.find(x=>x[0]===(d+1)%7)[1];
+  document.getElementById("dot").classList.toggle("closed", !open);
+  document.getElementById("nowText").textContent = open
+    ? (lang==="es" ? `Abierto ahora, hasta las ${h[2]}` : `Open now, until ${h[2]}`)
+    : (lang==="es" ? `Ahora cerrado, abrimos a las ${next}` : `Closed now, we open at ${next}`);
+}
+function setLang(l){ lang=l; document.documentElement.dataset.lang=l; document.documentElement.lang=l; document.getElementById("lang").textContent = l==="es"?"EN":"ES"; try{localStorage.setItem("bretema-lang",l)}catch(e){} render(); }
+document.getElementById("lang").onclick = () => setLang(lang==="es"?"en":"es");
+setLang(lang);
+document.querySelectorAll("[data-demo],[data-demo-ig]").forEach(b => b.onclick = e => { e.preventDefault(); alert(lang==="es" ? "Web de ejemplo: el 981 000 000 es inventado. En la web de un negocio real este botón llama directamente." : "Demo site: the business's real contact would go here."); });
+const io = new IntersectionObserver(es => es.forEach(e => { if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }), {threshold:.1});
+document.querySelectorAll(".fade").forEach(el => io.observe(el));
+</script>
+</body>
+</html>
